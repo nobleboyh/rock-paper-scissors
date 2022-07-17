@@ -1,0 +1,17 @@
+.wrapper {
+  --color: #fff;
+  position: relative;
+  z-index: 20;
+  box-shadow: 0 0.3rem 0.1rem var(--color);
+  cursor: pointer;
+
+  div:first-child {
+    box-shadow: 0 0.3rem 0.1rem #bcbed2 inset;
+  }
+}
+
+.win {
+  z-index: 18;
+  border-radius: 9999px;
+  box-shadow: 0 0 0.1rem 2rem #293251, 0 0 0.1rem 4rem #232e4c, 0 0 0.1rem 6rem #1e2a4a;
+}

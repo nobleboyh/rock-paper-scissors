@@ -1,0 +1,38 @@
+.line1 {
+  position: relative;
+  &::after {
+    position: absolute;
+    content: '';
+    width: 12rem;
+    height: 1rem;
+    background-color: #13233b;
+    top: calc(50% - 1rem / 2);
+    left: calc(50% - 12rem / 2);
+  }
+}
+
+.line2 {
+  position: relative;
+  &::after {
+    position: absolute;
+    content: '';
+    width: 12rem;
+    height: 1rem;
+    background-color: #13233b;
+    top: calc(50% - 1rem / 2);
+    left: calc(50%);
+    transform-origin: left;
+    transform: rotate(-60deg);
+  }
+  &::before {
+    position: absolute;
+    content: '';
+    width: 12rem;
+    height: 1rem;
+    background-color: #13233b;
+    top: calc(50% - 1rem / 2);
+    right: calc(50%);
+    transform-origin: right;
+    transform: rotate(60deg);
+  }
+}
