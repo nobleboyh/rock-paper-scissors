@@ -3,7 +3,10 @@ import classNames from 'classnames/bind';
 import styles from './Element.module.scss';
 
 let cx = classNames.bind(styles);
-const Element = ({ src, scissors, rock, paper, win, onClick }) => {
+const defaultFn = (e) => {
+  e.preventDefault();
+};
+const Element = ({ src, scissors, rock, paper, win, large, onClick = defaultFn }) => {
   const wrapperRef = useRef();
   let defaultClasses = [
     'wrapper',
@@ -22,6 +25,10 @@ const Element = ({ src, scissors, rock, paper, win, onClick }) => {
   } else if (paper) {
     defaultClasses.push('bg-paper');
   } else {
+  }
+
+  if (large) {
+    defaultClasses.push('scale-150');
   }
 
   useEffect(() => {

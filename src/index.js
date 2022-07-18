@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router } from 'react-router-dom';
 
-export const AppContext = createContext({ score: 0, type: null });
+export const AppContext = createContext({ score: undefined, type: null });
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
